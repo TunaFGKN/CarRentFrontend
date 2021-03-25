@@ -6,13 +6,15 @@
 </div>
 <table *ngIf="dataLoaded==true" class="table">
     <thead>
-        <tr>            
-            <th>Model</th>
-            <th>Renk</th>         
+        <tr>    
+            <th>Marka</th>        
+            <th>Renk</th>   
+            <th>Günlük Fiyat</th>      
         </tr>
     </thead>
     <tr *ngFor="let car of cars">
         <td>{{car.brandName}}</td>
         <td>{{car.colorName}}</td>
+        <td>{{car.carDailyPrice}}</td>
     </tr>
  </table>

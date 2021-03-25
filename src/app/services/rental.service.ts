@@ -8,11 +8,12 @@ import { RentalResponseModel } from '../models/rentalResponseModel';
 })
 export class RentalService {
 
-  apiUrl = "https://localhost:44371/api/rentals/getall"
+  apiUrl = "https://localhost:44371/api/"
 
   constructor(private httpClient:HttpClient) { }
 
   getRentals():Observable<RentalResponseModel>{
-    return this.httpClient.get<RentalResponseModel>(this.apiUrl)
+    let newPath = this.apiUrl + "rentals/getall"
+    return this.httpClient.get<RentalResponseModel>(newPath)
   }
 }
